@@ -151,6 +151,15 @@ Inside the browser dashboard you can:
 5. Inject instability scenarios
 6. Inspect machine prediction metrics in detail
 
+## Presentation Talking Points
+
+If you need to explain the project in a review or viva, you can describe it as:
+
+- A predictive maintenance system for machine-status monitoring
+- A browser-based industrial dashboard backed by a machine-learning model
+- A project that supports both synthetic telemetry and a cited public dataset
+- A simulation environment for demonstrating good, moderate, and critical machine states
+
 ## Notes
 
 - The project uses only the Python standard library.

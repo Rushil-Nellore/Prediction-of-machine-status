@@ -90,15 +90,7 @@
 
       <section class="stats" id="stats"></section>
 
-      <section class="panel">
-        <div class="panel-header">
-          <h2>Fleet Machines</h2>
-          <p>Live health, risk, maintenance outlook, and grouped machine status.</p>
-        </div>
-        <div class="machine-sections" id="machineSections"></div>
-      </section>
-
-      <section class="panel" id="telemetrySection" style="display: none; margin-top: 18px;">
+      <section class="panel" id="telemetrySection" style="display: none; margin-bottom: 18px;">
         <div class="panel-header">
           <h2 id="telemetryTitle">Machine Telemetry</h2>
           <p>Live metrics: Bearing Strain (Mechanical Stress), Power Draw, and Thermal Stress.</p>
@@ -106,6 +98,14 @@
         <div class="chart-container" style="position: relative; height: 350px; width: 100%">
           <canvas id="metricsChart"></canvas>
         </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Fleet Machines</h2>
+          <p>Live health, risk, maintenance outlook, and grouped machine status.</p>
+        </div>
+        <div class="machine-sections" id="machineSections"></div>
       </section>
     </main>
 

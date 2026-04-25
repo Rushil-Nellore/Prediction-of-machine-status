@@ -11,7 +11,7 @@
 
 ## 📖 Overview
 
-This project is a full-stack **Engineering-Grade Predictive Maintenance System**. It bridges the gap between raw industrial sensor telemetry and actionable machine-learning insights. 
+This project is a full-stack **Predictive Machine Maintenance System**. It bridges the gap between raw industrial sensor telemetry and actionable machine-learning insights. 
 
 The platform continuously monitors a live fleet of simulated (or streaming dataset) machines, processing telemetry like **Vibration**, **Temperature**, **Pressure**, **Current**, **RPM**, and **Load**. It runs this data through a custom Logistic Regression model to instantly predict:
 

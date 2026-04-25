@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictive Maintenance Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Industrial AI Monitoring</p>
+          <h1>Predictive Maintenance Control Center</h1>
+          <p class="hero-copy">
+            Real-time monitoring for machine health, failure risk, and maintenance urgency
+            across a simulated industrial fleet.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button id="tickButton">Advance Simulation</button>
+          <button id="resetButton" class="secondary">Reset</button>
+          <button id="alertsToggleButton" class="secondary alerts-btn">Alerts <span id="alertBadge" class="badge-count hidden">0</span></button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Scenario Lab</h2>
+          <p>Inject unstable machine behavior to demonstrate warning and critical states.</p>
+        </div>
+        <div class="scenario-controls">
+          <label>
+            <span>Machine</span>
+            <select id="scenarioMachine"></select>
+          </label>
+          <label>
+            <span>Example Scenario</span>
+            <select id="scenarioSelect"></select>
+          </label>
+          <button id="injectScenarioButton">Inject Scenario</button>
+        </div>
+        <div class="scenario-help" id="scenarioHelp"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Machine Onboarding</h2>
+          <p>Add a new machine to the fleet using a template machine and its baseline sensor values.</p>
+        </div>
+        <form class="onboarding-form" id="machineForm">
+          <label>
+            <span>New Machine ID</span>
+            <input id="newMachineId" name="machine_id" type="text" placeholder="MX-201" required />
+          </label>
+          <label>
+            <span>Template Machine</span>
+            <select id="templateMachine" name="template_id"></select>
+          </label>
+          <label>
+            <span>Vibration</span>
+            <input id="inputVibration" name="vibration" type="number" step="0.01" required />
+          </label>
+          <label>
+            <span>Temperature</span>
+            <input id="inputTemperature" name="temperature" type="number" step="0.01" required />
+          </label>
+          <label>
+            <span>Pressure</span>
+            <input id="inputPressure" name="pressure" type="number" step="0.01" required />
+          </label>
+          <label>
+            <span>Current</span>
+            <input id="inputCurrent" name="current" type="number" step="0.01" required />
+          </label>
+          <label>
+            <span>RPM</span>
+            <input id="inputRpm" name="rpm" type="number" step="0.01" required />
+          </label>
+          <label>
+            <span>Load</span>
+            <input id="inputLoad" name="load" type="number" step="0.01" required />
+          </label>
+          <button type="submit" id="addMachineButton">Add Machine</button>
+        </form>
+        <div class="scenario-help" id="machineFormHelp">
+          Use the current sensor values of an existing machine as a starting template, then adjust the readings for the new asset.
+        </div>
+      </section>
+
+      <section class="stats" id="stats"></section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Fleet Machines</h2>
+          <p>Live health, risk, maintenance outlook, and grouped machine status.</p>
+        </div>
+        <div class="machine-sections" id="machineSections"></div>
+      </section>
+
+      <section class="panel" id="telemetrySection" style="display: none; margin-top: 18px;">
+        <div class="panel-header">
+          <h2 id="telemetryTitle">Machine Telemetry</h2>
+          <p>Live metrics: Bearing Strain (Mechanical Stress), Power Draw, and Thermal Stress.</p>
+        </div>
+        <div class="chart-container" style="position: relative; height: 350px; width: 100%">
+          <canvas id="metricsChart"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal hidden" id="machineModal">
+      <div class="modal-card">
+        <div class="panel-header">
+          <h2 id="modalTitle">Machine Snapshot</h2>
+          <div class="modal-actions">
+            <button id="removeMachineButton" class="secondary danger" type="button">Remove Machine</button>
+            <button id="closeModalButton" class="secondary" type="button">Close</button>
+          </div>
+        </div>
+        <div class="modal-content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <div class="modal hidden" id="alertsModal">
+      <div class="modal-card">
+        <div class="panel-header">
+          <h2>Alert Feed</h2>
+          <button id="closeAlertsButton" class="secondary" type="button">Close</button>
+        </div>
+        <div class="modal-content">
+          <div class="feed" id="eventFeed"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/app.js?v=2"></script>
+  </body>
+</html>

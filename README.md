@@ -89,30 +89,30 @@ python main.py bootstrap-ai4i
 
 ```text
 .
-├── main.py
-├── README.md
-├── requirements.txt
-├── client_simulator.py
-├── dataset_client.py
-├── src/
-│   └── predictive_maintenance/
-│       ├── api_server.py
-│       ├── config.py
-│       ├── features.py
-│       ├── realtime.py
-│       ├── training.py
-│       ├── utils.py
-│       ├── data/
-│       │   ├── external.py
-│       │   └── simulate.py
-│       ├── models/
-│       │   └── health_model.py
-│       └── static/
-│           ├── app.js
-│           ├── index.html
-│           └── styles.css
-└── tests/
-    └── smoke_test.py
+|-- main.py
+|-- README.md
+|-- requirements.txt
+|-- client_simulator.py
+|-- dataset_client.py
+|-- src/
+|   `-- predictive_maintenance/
+|       |-- api_server.py
+|       |-- config.py
+|       |-- features.py
+|       |-- realtime.py
+|       |-- training.py
+|       |-- utils.py
+|       |-- data/
+|       |   |-- external.py
+|       |   `-- simulate.py
+|       |-- models/
+|       |   `-- health_model.py
+|       `-- static/
+|           |-- app.js
+|           |-- index.html
+|           `-- styles.css
+`-- tests/
+    `-- smoke_test.py
 ```
 
 ## Quick Start

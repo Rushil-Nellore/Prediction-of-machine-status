@@ -59,18 +59,17 @@ The project is built entirely on the Python Standard Library (no heavy framework
 ### 1. Boot up the Backend Server
 First, generate the initial dataset, train the AI model, and start the API server:
 ```powershell
-python main.py bootstrap-ai4i # From kaggle data set
+python main.py bootstrap
 python main.py serve
 ```
 > *The server will start running at [http://127.0.0.1:8000](http://127.0.0.1:8000)*
 
 ### 2. Stream Live Edge Data
-Open a **second terminal window** in the project folder and run the streaming client. This script acts like a physical IoT device attached to a failing machine, pushing telemetry to your dashboard every second!
+To use the data from the Ai4i Kaggle dataset, start the API server:
 ```powershell
-python dataset_client.py
+python main.py bootstrap-ai4i # From kaggle data set
+python main.py serve
 ```
-Watch your dashboard as `MX-CRITICAL-01` appears and its risk meter begins to climb!
-
 ---
 
 ## 🛠️ Command Line Reference

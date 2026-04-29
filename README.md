@@ -88,15 +88,6 @@ The `main.py` CLI is your control center for the backend:
 
 ---
 
-## 🎓 Presentation / Viva Talking Points
-If you are presenting this project, hit these major engineering concepts:
-1. **End-to-End Pipeline**: We built everything from data generation, to feature engineering, to model training, to live API serving, and finally frontend data visualization.
-2. **Event-Driven Architecture**: The frontend passively consumes an API, while independent edge clients (`dataset_client.py`) push telemetry over HTTP.
-3. **Advanced UI/UX**: The dashboard prioritizes cognitive load. It categorizes fleets by health, uses modern SVG/Canvas graphs for data density, and employs a non-intrusive alert notification system.
-4. **Real-World Ready**: Instead of just running a model on a static CSV file, this project proves the model works in a continuous, live streaming environment.
-
----
-
 ## 📝 Notes
 
 - The project uses only the Python standard library.

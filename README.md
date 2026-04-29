@@ -59,7 +59,7 @@ The project is built entirely on the Python Standard Library (no heavy framework
 ### 1. Boot up the Backend Server
 First, generate the initial dataset, train the AI model, and start the API server:
 ```powershell
-python main.py bootstrap
+python main.py bootstrap-ai4i # From kaggle data set
 python main.py serve
 ```
 > *The server will start running at [http://127.0.0.1:8000](http://127.0.0.1:8000)*
